@@ -354,6 +354,7 @@ h6 {
 .image-container {
   height: 280px;
   position: relative;
+  border-bottom: 1px solid black;
 }
 
 .project-image,
@@ -377,7 +378,11 @@ h6 {
 }
 
 .post-info-container {
+  height: 150px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post-wrapper {
