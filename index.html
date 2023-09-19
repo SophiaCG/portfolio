@@ -113,13 +113,13 @@
                 <li>Swift</li>
                 <li>SwiftUI</li>
                 <li>UIKit</li>
-                <li>Xcode</li>
                 <li>Core Data</li>
+                <li>CocoaPods</li>
               </ul>
 
               <ul>
                 <li>Flutter</li>
-                <li>Dart</li>
+                <li>React</li>
                 <li>VS Code</li>
                 <li>Javascript</li>
                 <li>HTML/CSS</li>
@@ -127,7 +127,7 @@
 
               <ul>
                 <li>SQL</li>
-                <li>CocoaPods</li>
+                <li>MongoDB</li>
                 <li>Firebase</li>
                 <li>Combine</li>
                 <li>Unit/UI Testing</li>
@@ -174,7 +174,7 @@
               <div class="code-button-container">
                 <a
                   class="code-button"
-                  href="https://github.com/SophiaCG/Google-Translate-SwiftUI"
+                  href="https://github.com/SophiaCG/news-app-web"
                   >Code</a
                 >
               </div>
@@ -183,13 +183,14 @@
     
           <div class="post-container">
             <div class="image-container">
-              <img class="project-image-hover" src="images/weather-website.png" alt="New Image">
+              <img class="project-image-hover" src="images/shopping-website-3.png" alt="New Image">
+              <img class="project-image" src="images/shopping-website.png" alt="Original Image">
             </div>
             <div class="post-info-container">
               <div class="post-text-container">              
-                <h6 class="post-title">Weather Forecast</h6>
+                <h6 class="post-title">Shopping Website</h6>
                 <p class="post-intro">
-                  Weather forecasting website I built using plain HTML, CSS, and Javascript.
+                  Simple e-commerce React app that uses MongoDB for the backend. I also used a fake e-commerce API for the fake products information.
                 </p>
   
                 </div>
@@ -198,7 +199,7 @@
               <div class="code-button-container">
                 <a
                   class="code-button"
-                  href="https://github.com/SophiaCG/Google-Translate-SwiftUI"
+                  href="https://github.com/SophiaCG/shopping-app"
                   >Code</a
                 >
               </div>
@@ -213,7 +214,7 @@
               <div class="post-text-container">              
                 <h6 class="post-title">Google Translate Clone</h6>
                 <p class="post-intro">
-                  Google Translate Clone that I built using SwiftUI and SQLite.
+                  Google Translate Clone that I built using SwiftUI and Core Data.
                 </p>
               </div>
     
@@ -234,20 +235,20 @@
         <a href=""></a>
         <h3 style="text-align: center">Contact Me</h3>
 
-        <form id="contact-form">
+        <form id="contact-form" action="/send-email" method="POST">
           <a name="contact"></a>
 
           <label>Name</label>
-          <input class="input-field" type="text" name="name" />
+          <input class="input-field" type="text" name="name" required/>
 
           <label>Subject</label>
-          <input class="input-field" type="text" name="subject" />
+          <input class="input-field" type="text" name="subject" required/>
 
           <label>Email</label>
-          <input class="input-field" type="text" name="email" />
+          <input class="input-field" type="text" name="email" required/>
 
           <label>Message</label>
-          <textarea class="input-field" name="message"></textarea>
+          <textarea class="input-field" name="message" required></textarea>
 
           <input id="submit-btn" type="submit" value="Send" />
         </form>

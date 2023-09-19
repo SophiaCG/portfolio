@@ -378,7 +378,7 @@ h6 {
 }
 
 .post-info-container {
-  height: 170px;
+  height: 190px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -388,7 +388,7 @@ h6 {
 .post-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
-  gap: 100px;
+  gap: 110px;
   justify-content: center;
   padding-bottom: 50px;
 }
