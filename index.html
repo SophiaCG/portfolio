@@ -144,10 +144,15 @@
               href="https://www.linkedin.com/in/sophiagorgonio/"
             >
               <i title="LinkedIn" id="linkedin-icon" class="fa-brands fa-linkedin"></i>
-            </a>
-            <a target="_blank" href="resume.pdf">
-              <i title="Download Resume" id="download-icon" class="fa-solid fa-download"></i>
-            </a>
+          </a>
+            <div>
+              <a target="_blank" href="resume.pdf">
+                <i title="Download Resume" id="download-icon" class="fa-solid fa-download"></i>
+              </a>  
+              <p id="settings-note">
+                *Download resume
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -256,5 +261,31 @@
     </section>
 
     <script type="text/javascript" src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const emailForm = document.getElementById("contact-form");
+
+        emailForm.addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent default form submission
+
+          const formData = new FormData(emailForm);
+
+          fetch("http://localhost:3000/send-email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(Object.fromEntries(formData)),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              alert(data.message);
+              emailForm.reset();
+            })
+            .catch((error) => console.error(error));
+        });
+      });
+    </script>
+
   </body>
 </html>
