@@ -326,6 +326,16 @@ h6 {
 }
 
 #download-icon:hover {
+  color: purple;
+}
+
+#email-icon {
+  transform: translateY(5px);
+  font-size: 100px;
+  color: var(--buttonColor);
+}
+
+#email-icon:hover {
   color: #dd3527;
 }
 
@@ -333,7 +343,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .social-links > div {

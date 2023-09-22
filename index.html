@@ -42,10 +42,6 @@
                 <div id="dot-3" class="browser-dot"></div>
               </div>
             </a>
-
-            <ul id="navigation">
-              <li><a href="index.html#contact">Contact</a></li>
-            </ul>
           </div>
 
           <div class="left-column">
@@ -145,8 +141,13 @@
             >
               <i title="https://www.linkedin.com/in/sophiagorgonio/" id="linkedin-icon" class="fa-brands fa-linkedin"></i>
           </a>
+
+          <a href="mailto:sophia.gorgonio@gmail.com" id="email-icon">
+            <i class="fa-solid fa-square-envelope"></i>
+          </a>    
+
             <div>
-              <a target="_blank" href="resume.pdf">
+              <a target="_blank" href="web-resume.pdf">
                 <i title="Download Resume" id="download-icon" class="fa-solid fa-download"></i>
               </a>  
               <p id="settings-note">
@@ -234,58 +235,6 @@
           </div>
     
     </section>
-
-    <section class="s2">
-      <div class="main-container">
-        <a href=""></a>
-        <h3 style="text-align: center">Contact Me</h3>
-
-        <form id="contact-form" action="/send-email" method="POST">
-          <a name="contact"></a>
-
-          <label>Name</label>
-          <input class="input-field" type="text" name="name" required/>
-
-          <label>Subject</label>
-          <input class="input-field" type="text" name="subject" required/>
-
-          <label>Email</label>
-          <input class="input-field" type="text" name="email" required/>
-
-          <label>Message</label>
-          <textarea class="input-field" name="message" required></textarea>
-
-          <input id="submit-btn" type="submit" value="Send" />
-        </form>
-      </div>
-    </section>
-
     <script type="text/javascript" src="script.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const emailForm = document.getElementById("contact-form");
-
-        emailForm.addEventListener("submit", function (e) {
-          e.preventDefault(); // Prevent default form submission
-
-          const formData = new FormData(emailForm);
-
-          fetch("http://localhost:3000/send-email", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(Object.fromEntries(formData)),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              alert(data.message);
-              emailForm.reset();
-            })
-            .catch((error) => console.error(error));
-        });
-      });
-    </script>
-
   </body>
 </html>
