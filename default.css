@@ -302,18 +302,15 @@ h6 {
   background-color: var(--previewShadow);
 }
 
-#github-icon {
+#github-icon,
+#linkedin-icon,
+#email-icon {
   font-size: 100px;
   color: var(--buttonColor);
 }
 
 #github-icon:hover {
   color: #2bcc3b;
-}
-
-#linkedin-icon {
-  font-size: 100px;
-  color: var(--buttonColor);
 }
 
 #linkedin-icon:hover {
@@ -331,8 +328,6 @@ h6 {
 
 #email-icon {
   transform: translateY(5px);
-  font-size: 100px;
-  color: var(--buttonColor);
 }
 
 #email-icon:hover {
