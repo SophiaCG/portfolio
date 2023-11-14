@@ -397,9 +397,14 @@ h6 {
 .post-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
-  gap: 110px;
+  gap: 100px;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+}
+
+.post-row {
+  justify-content: center;
+  width: 100%;
 }
 
 .post-title {
